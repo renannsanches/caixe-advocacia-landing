@@ -12,9 +12,9 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/38616799-c58c-4a7d-bb24-9a9f835e621d.png"
+          src="/lovable-uploads/29964942-9f9c-4094-8efc-a79c1da7652a.png"
           alt="Dr. Vanderley Caixe Filho - Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
@@ -23,8 +23,8 @@ const HeroSection = () => {
       <div className="section-container relative z-10">
         <div className="max-w-4xl">
           {/* Content */}
-          <div className="text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start mb-6">
+          <div className="text-left">
+            <div className="flex items-center mb-6">
               <Scale className="w-8 h-8 text-gold mr-3" />
               <span className="text-gold font-semibold text-sm tracking-wider uppercase">
                 Advocacia Criminal Especializada
@@ -43,7 +43,7 @@ const HeroSection = () => {
               <span className="text-gold font-medium">Presencial e Remota em todo o Brasil</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={handleWhatsAppClick}
                 className="whatsapp-button text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center group"
@@ -58,7 +58,7 @@ const HeroSection = () => {
               </button>
             </div>
             
-            <div className="mt-8 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-400">
+            <div className="mt-8 flex items-center space-x-8 text-sm text-gray-400">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
                 Atendimento 24h
