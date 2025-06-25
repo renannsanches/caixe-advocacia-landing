@@ -10,14 +10,14 @@ const CoverageSection = () => {
           <div className="relative">
             <div className="bg-light-graphite rounded-2xl p-8 border border-gold/20 shadow-gold">
               <img 
-                src="https://images.unsplash.com/photo-1571919743851-d6c55915a1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Mapa do Brasil - Atendimento Nacional"
+                src="/lovable-uploads/2e26cf04-db50-4f5d-a8e2-9af570dbdff8.png"
+                alt="Mapa de Ribeirão Preto e Região - Atendimento Regional"
                 className="w-full h-64 object-cover rounded-lg"
               />
               <div className="absolute inset-8 bg-black/40 rounded-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <MapPin className="w-16 h-16 text-gold mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold">Atendimento Nacional</h3>
+                  <h3 className="text-2xl font-bold">Ribeirão Preto e Região</h3>
                   <p className="text-gold">Presencial e Remoto</p>
                 </div>
               </div>
@@ -30,11 +30,11 @@ const CoverageSection = () => {
               Área de Atuação
             </span>
             <h2 className="heading-secondary">
-              Atendimento Remoto em Todo o Brasil
+              Atendimento em Ribeirão Preto e Região
             </h2>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Oferecemos consultoria jurídica especializada para todo o território nacional, 
+              Oferecemos consultoria jurídica especializada para Ribeirão Preto e toda a região, 
               combinando a agilidade do atendimento remoto com a discrição necessária para 
               casos criminais.
             </p>
@@ -45,8 +45,8 @@ const CoverageSection = () => {
                   <MapPin className="w-6 h-6 text-gold" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Cobertura Nacional</h4>
-                  <p className="text-gray-300">Atendimento em todos os estados brasileiros via videoconferência e documentação digital.</p>
+                  <h4 className="font-semibold text-white mb-2">Cobertura Regional</h4>
+                  <p className="text-gray-300">Atendimento presencial em Ribeirão Preto e região, além de consultoria remota via videoconferência.</p>
                 </div>
               </div>
               
