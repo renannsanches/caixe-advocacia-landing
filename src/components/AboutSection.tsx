@@ -12,7 +12,16 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section
+  className="py-20 relative bg-cover bg-center"
+style={{
+  backgroundImage: "url('/images/jbg.webp')",
+  backgroundSize: "auto",         // cobre toda a seção
+  backgroundPosition: "center",    // centraliza a imagem
+  backgroundRepeat: "no-repeat",   // evita repetição
+}}
+>
+      
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Photo */}

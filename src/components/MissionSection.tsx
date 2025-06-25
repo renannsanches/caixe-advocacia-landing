@@ -1,10 +1,17 @@
-
 import { Scale, Shield } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const MissionSection = () => {
   return (
-    <section className="py-20 relative">
+    <section
+  className="py-20 relative bg-cover bg-center"
+style={{
+  backgroundImage: "url('/images/jbg2.webp')",
+  backgroundSize: "cover",         // cobre toda a seção
+  backgroundPosition: "center",    // centraliza a imagem
+  backgroundRepeat: "no-repeat",   // evita repetição
+}}
+>
       <div className="section-container">
         <div className="relative">
           {/* Background Image with Overlay */}
