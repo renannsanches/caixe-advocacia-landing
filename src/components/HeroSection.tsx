@@ -1,4 +1,3 @@
-
 import { MessageCircle, Shield, Scale } from "lucide-react";
 
 const HeroSection = () => {
@@ -8,7 +7,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -16,12 +15,12 @@ const HeroSection = () => {
           alt="Dr. Vanderley Caixe Filho - Background"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       </div>
       
-      <div className="section-container relative z-10">
-        <div className="max-w-4xl">
+      <div className="section-container relative z-10 w-full">
+        <div className="max-w-2xl">
           {/* Content */}
           <div className="text-left">
             <div className="flex items-center mb-6">
@@ -34,7 +33,8 @@ const HeroSection = () => {
             <h1 className="heading-primary mb-6">
               <span className="text-gold">Vanderley Caixe Filho</span>
               <br />
-              Advogado Criminalista ao Lado de Quem Precisa de Justiça
+              Advogado Criminalista<br />
+              ao Lado de Quem Precisa<br /> de Justiça
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
