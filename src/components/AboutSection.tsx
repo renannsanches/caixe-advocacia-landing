@@ -18,7 +18,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-gold rounded-2xl blur-2xl opacity-20 transform -rotate-3"></div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="/lovable-uploads/a1b87e4a-7f0c-409a-9cb6-ed5e035dc47f.png"
                 alt="Dr. Vanderley Caixe Filho - Sobre o Advogado"
                 className="w-full h-96 object-cover rounded-2xl shadow-gold"
               />
