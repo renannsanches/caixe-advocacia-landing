@@ -1,5 +1,6 @@
 
 import { MessageCircle, Search, Shield, CheckCircle } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const ProcessSection = () => {
   const steps = [
@@ -32,17 +33,19 @@ const ProcessSection = () => {
   return (
     <section className="py-20">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
-            Como Funciona
-          </span>
-          <h2 className="heading-secondary">
-            Linha do Tempo: Como Funciona a Defesa
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Processo transparente e eficiente, desde o primeiro contato até a resolução do caso.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+              Como Funciona
+            </span>
+            <h2 className="heading-secondary">
+              Linha do Tempo: Como Funciona a Defesa
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Processo transparente e eficiente, desde o primeiro contato até a resolução do caso.
+            </p>
+          </div>
+        </ScrollReveal>
         
         <div className="relative">
           {/* Timeline Line */}
@@ -50,36 +53,39 @@ const ProcessSection = () => {
           
           <div className="space-y-12">
             {steps.map((step, index) => (
-              <div 
-                key={index}
-                className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+              <ScrollReveal 
+                key={index} 
+                delay={300 + index * 200}
+                direction={index % 2 === 0 ? 'right' : 'left'}
               >
-                <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                  <div className="card-elegant">
-                    <div className="flex items-center mb-4">
-                      <div className="bg-gold text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mr-4">
-                        {step.step}
+                <div className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
+                    <div className="card-elegant">
+                      <div className="flex items-center mb-4">
+                        <div className="bg-gold text-black rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mr-4">
+                          {step.step}
+                        </div>
+                        <step.icon className="w-8 h-8 text-gold" />
                       </div>
-                      <step.icon className="w-8 h-8 text-gold" />
+                      
+                      <h3 className="text-2xl font-semibold text-white mb-4">
+                        {step.title}
+                      </h3>
+                      
+                      <p className="text-gray-300 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
-                    
-                    <h3 className="text-2xl font-semibold text-white mb-4">
-                      {step.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 leading-relaxed">
-                      {step.description}
-                    </p>
                   </div>
+                  
+                  {/* Timeline Dot */}
+                  <div className="hidden lg:block w-2/12 flex justify-center">
+                    <div className="w-6 h-6 bg-gold rounded-full border-4 border-light-graphite shadow-lg"></div>
+                  </div>
+                  
+                  <div className="hidden lg:block w-5/12"></div>
                 </div>
-                
-                {/* Timeline Dot */}
-                <div className="hidden lg:block w-2/12 flex justify-center">
-                  <div className="w-6 h-6 bg-gold rounded-full border-4 border-light-graphite shadow-lg"></div>
-                </div>
-                
-                <div className="hidden lg:block w-5/12"></div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

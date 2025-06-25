@@ -1,5 +1,6 @@
 
 import { Scale, Shield } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const MissionSection = () => {
   return (
@@ -20,27 +21,37 @@ const MissionSection = () => {
           {/* Content */}
           <div className="relative z-10 py-32 px-12">
             <div className="max-w-3xl">
-              <div className="flex items-center mb-8">
-                <Scale className="w-12 h-12 text-gold mr-4" />
-                <Shield className="w-12 h-12 text-gold" />
-              </div>
+              <ScrollReveal delay={200}>
+                <div className="flex items-center mb-8">
+                  <Scale className="w-12 h-12 text-gold mr-4" />
+                  <Shield className="w-12 h-12 text-gold" />
+                </div>
+              </ScrollReveal>
               
-              <h2 className="font-playfair text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                Justiça & <span className="text-gold">Liberdade</span>
-              </h2>
+              <ScrollReveal delay={400}>
+                <h2 className="font-playfair text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                  Justiça & <span className="text-gold">Liberdade</span>
+                </h2>
+              </ScrollReveal>
               
-              <div className="w-24 h-1 bg-gold mb-8"></div>
+              <ScrollReveal delay={600}>
+                <div className="w-24 h-1 bg-gold mb-8"></div>
+              </ScrollReveal>
               
-              <p className="text-2xl text-gray-200 leading-relaxed font-light">
-                "Quando a vida de alguém está em jogo, a defesa precisa ser impecável. 
-                Cada caso é uma batalha pela justiça, cada cliente é uma vida que merece 
-                ser defendida com toda nossa dedicação e expertise."
-              </p>
+              <ScrollReveal delay={800}>
+                <p className="text-2xl text-gray-200 leading-relaxed font-light">
+                  "Quando a vida de alguém está em jogo, a defesa precisa ser impecável. 
+                  Cada caso é uma batalha pela justiça, cada cliente é uma vida que merece 
+                  ser defendida com toda nossa dedicação e expertise."
+                </p>
+              </ScrollReveal>
               
-              <div className="mt-12 flex items-center text-gold font-semibold">
-                <div className="w-16 h-px bg-gold mr-4"></div>
-                <span className="text-sm tracking-wider uppercase">Missão & Compromisso</span>
-              </div>
+              <ScrollReveal delay={1000}>
+                <div className="mt-12 flex items-center text-gold font-semibold">
+                  <div className="w-16 h-px bg-gold mr-4"></div>
+                  <span className="text-sm tracking-wider uppercase">Missão & Compromisso</span>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>

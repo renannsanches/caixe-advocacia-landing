@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -39,44 +40,47 @@ const FAQSection = () => {
   return (
     <section className="py-20">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
-            Perguntas Frequentes
-          </span>
-          <h2 className="heading-secondary">
-            Esclarecemos Suas Dúvidas
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+              Perguntas Frequentes
+            </span>
+            <h2 className="heading-secondary">
+              Esclarecemos Suas Dúvidas
+            </h2>
+          </div>
+        </ScrollReveal>
         
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div 
-                key={index}
-                className="card-elegant cursor-pointer"
-                onClick={() => toggleFAQ(index)}
-              >
-                <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-white pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    {openIndex === index ? (
-                      <ChevronUp className="w-6 h-6 text-gold" />
-                    ) : (
-                      <ChevronDown className="w-6 h-6 text-gold" />
-                    )}
+              <ScrollReveal key={index} delay={200 + index * 100}>
+                <div 
+                  className="card-elegant cursor-pointer"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-lg font-semibold text-white pr-4">
+                      {faq.question}
+                    </h3>
+                    <div className="flex-shrink-0">
+                      {openIndex === index ? (
+                        <ChevronUp className="w-6 h-6 text-gold" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6 text-gold" />
+                      )}
+                    </div>
                   </div>
+                  
+                  {openIndex === index && (
+                    <div className="mt-4 pt-4 border-t border-gold/20">
+                      <p className="text-gray-300 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  )}
                 </div>
-                
-                {openIndex === index && (
-                  <div className="mt-4 pt-4 border-t border-gold/20">
-                    <p className="text-gray-300 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

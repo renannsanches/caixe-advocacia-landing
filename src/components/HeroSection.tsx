@@ -1,4 +1,6 @@
+
 import { MessageCircle, Shield, Scale } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -23,55 +25,65 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           {/* Content */}
           <div className="text-left">
-            <div className="flex items-center mb-6">
-              <Scale className="w-8 h-8 text-gold mr-3" />
-              <span className="text-gold font-semibold text-sm tracking-wider uppercase">
-                Advocacia Criminal Especializada
-              </span>
-            </div>
-            
-            <h1 className="heading-primary mb-6">
-              <span className="text-gold">Vanderley Caixe Filho</span>
-              <br />
-              Advogado Criminalista<br />
-              ao Lado de Quem Precisa<br /> de Justiça
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Atuação estratégica, sigilosa e combativa para garantir sua liberdade.
-              <br />
-              <span className="text-gold font-medium">Presencial e Remota em todo o Brasil</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={handleWhatsAppClick}
-                className="whatsapp-button text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center group"
-              >
-                <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Consultoria Emergencial
-              </button>
-              
-              <button className="btn-primary flex items-center justify-center">
-                <Shield className="w-5 h-5 mr-2" />
-                Saiba Mais
-              </button>
-            </div>
-            
-            <div className="mt-8 flex items-center space-x-8 text-sm text-gray-400">
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
-                Atendimento 24h
+            <ScrollReveal delay={200}>
+              <div className="flex items-center mb-6">
+                <Scale className="w-8 h-8 text-gold mr-3" />
+                <span className="text-gold font-semibold text-sm tracking-wider uppercase">
+                  Advocacia Criminal Especializada
+                </span>
               </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
-                Sigilo Absoluto
+            </ScrollReveal>
+            
+            <ScrollReveal delay={400}>
+              <h1 className="heading-primary mb-6">
+                <span className="text-gold">Vanderley Caixe Filho</span>
+                <br />
+                Advogado Criminalista<br />
+                ao Lado de Quem Precisa<br /> de Justiça
+              </h1>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={600}>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Atuação estratégica, sigilosa e combativa para garantir sua liberdade.
+                <br />
+                <span className="text-gold font-medium">Presencial e Remota em todo o Brasil</span>
+              </p>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={800}>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={handleWhatsAppClick}
+                  className="whatsapp-button text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center group"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  Consultoria Emergencial
+                </button>
+                
+                <button className="btn-primary flex items-center justify-center">
+                  <Shield className="w-5 h-5 mr-2" />
+                  Saiba Mais
+                </button>
               </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
-                Defesa Combativa
+            </ScrollReveal>
+            
+            <ScrollReveal delay={1000}>
+              <div className="mt-8 flex items-center space-x-8 text-sm text-gray-400">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  Atendimento 24h
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  Sigilo Absoluto
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  Defesa Combativa
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>
