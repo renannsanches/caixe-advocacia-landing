@@ -7,29 +7,29 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 45 100% 51%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 45 100% 51%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --background: 0 0% 86%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 86%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 86%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 210 100% 25%;
+    --primary-foreground: 0 0% 86%;
+    --secondary: 0 0% 75%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 75%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 210 100% 25%;
+    --accent-foreground: 0 0% 86%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 45 100% 51%;
+    --destructive-foreground: 0 0% 86%;
+    --border: 0 0% 75%;
+    --input: 0 0% 75%;
+    --ring: 210 100% 25%;
     --radius: 0.5rem;
-    --gold: #d4af37;
-    --dark-graphite: #1a1a1a;
-    --light-graphite: #2a2a2a;
+    --gold: 210 100% 25%;
+    --dark-graphite: 0 0% 20%;
+    --light-graphite: 0 0% 30%;
   }
 
   * {
@@ -38,7 +38,7 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    background: linear-gradient(135deg, #dcdcdc 0%, #f0f0f0 100%);
   }
 
   .font-playfair {
@@ -70,11 +70,11 @@
   }
 
   .gradient-gold {
-    background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%);
+    background: linear-gradient(135deg, hsl(210 100% 25%) 0%, hsl(210 100% 20%) 100%);
   }
 
   .shadow-gold {
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 10px 25px hsla(210, 100%, 25%, 0.15);
   }
 
   .hover-scale {
@@ -102,22 +102,22 @@
   }
 
   .card-elegant {
-    @apply bg-light-graphite border border-gold/20 rounded-lg p-6 shadow-gold backdrop-blur-sm;
+    @apply bg-card border border-primary/20 rounded-lg p-6 shadow-gold backdrop-blur-sm;
   }
 
   .btn-primary {
-    @apply bg-gold text-black font-semibold py-3 px-8 rounded-lg hover:bg-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .heading-primary {
-    @apply font-playfair text-4xl lg:text-6xl font-bold text-white leading-tight;
+    @apply font-playfair text-4xl lg:text-6xl font-bold text-foreground leading-tight;
   }
 
   .heading-secondary {
-    @apply font-playfair text-3xl lg:text-4xl font-semibold text-gold mb-6;
+    @apply font-playfair text-3xl lg:text-4xl font-semibold text-primary mb-6;
   }
 
   .text-elegant {
-    @apply text-gray-300 leading-relaxed;
+    @apply text-muted-foreground leading-relaxed;
   }
 }
