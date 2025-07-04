@@ -21,8 +21,8 @@ const ServicesSection = () => {
     },
     {
       icon: Users,
-      title: "Tribunal do Júri",
-      description: "Defesa técnica especializada em crimes dolosos contra a vida perante o júri popular.",
+      title: "Preservação da Imagem",
+      description: "Preservação absoluta da imagem do cliente, evitando danos à reputação.",
     },
     {
       icon: Search,
@@ -37,17 +37,17 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-light-graphite/50">
+    <section className="py-20 bg-light-graphite/10">
       <div className="section-container">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+            <span className="text-color:#1f1f1f font-semibold text-sm tracking-wider uppercase mb-4 block">
               Áreas de Atuação
             </span>
             <h2 className="heading-secondary">
               Defesa Criminal Especializada
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-color:#1f1f1f max-w-3xl mx-auto">
               Atuação estratégica em todas as fases do processo criminal, com foco em 
               crimes patrimoniais e defesa dos direitos fundamentais.
             </p>

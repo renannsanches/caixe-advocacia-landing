@@ -17,7 +17,8 @@ style={{
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 rounded-3xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+              src="/justice.webp"
+
               alt="Justiça e Liberdade"
               className="w-full h-full object-cover"
             />
@@ -47,16 +48,14 @@ style={{
               
               <ScrollReveal delay={800}>
                 <p className="text-2xl text-gray-200 leading-relaxed font-light">
-                  "Quando a vida de alguém está em jogo, a defesa precisa ser impecável. 
-                  Cada caso é uma batalha pela justiça, cada cliente é uma vida que merece 
-                  ser defendida com toda nossa dedicação e expertise."
+                  "Enquanto a prática penitenciária abandona o ideal de ressocialização e assume as prisões como depósito, os tribunais, ignorando tal realidade, continuam usando o termo ressocialização para encarcerar."
                 </p>
               </ScrollReveal>
               
               <ScrollReveal delay={1000}>
                 <div className="mt-12 flex items-center text-gold font-semibold">
                   <div className="w-16 h-px bg-gold mr-4"></div>
-                  <span className="text-sm tracking-wider uppercase">Missão & Compromisso</span>
+                  <span className="text-sm tracking-wider uppercase">Luis Carlos Valois</span>
                 </div>
               </ScrollReveal>
             </div>

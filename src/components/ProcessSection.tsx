@@ -35,13 +35,13 @@ const ProcessSection = () => {
       <div className="section-container">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+            <span className="text-color:#1f1f1f font-semibold text-sm tracking-wider uppercase mb-4 block">
               Como Funciona
             </span>
             <h2 className="heading-secondary">
               Linha do Tempo: Como Funciona a Defesa
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-[#1f1f1f] max-w-3xl mx-auto">
               Processo transparente e eficiente, desde o primeiro contato até a resolução do caso.
             </p>
           </div>
@@ -80,7 +80,7 @@ const ProcessSection = () => {
                   
                   {/* Timeline Dot */}
                   <div className="hidden lg:block w-2/12 flex justify-center">
-                    <div className="w-6 h-6 bg-gold rounded-full border-4 border-light-graphite shadow-lg"></div>
+                    <div className="w-6 h-6 bg-[#2d4e91] rounded-full border-1 border-light-graphite shadow-lg"></div>
                   </div>
                   
                   <div className="hidden lg:block w-5/12"></div>

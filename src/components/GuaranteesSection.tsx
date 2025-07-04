@@ -1,4 +1,3 @@
-
 import { Lock, Sword, MessageSquare, Clock } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
@@ -31,11 +30,11 @@ const GuaranteesSection = () => {
       <div className="section-container">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+            <span className="text-[#1f1f1f] font-semibold text-sm tracking-wider uppercase mb-4 block">
               Garantias Emocionais
             </span>
             <h2 className="heading-secondary">
-              Seu Tranquilidade é Nossa Prioridade
+              Sua Tranquilidade é Nossa Prioridade
             </h2>
           </div>
         </ScrollReveal>
@@ -48,11 +47,11 @@ const GuaranteesSection = () => {
                   <guarantee.icon className="w-12 h-12 text-gold mx-auto" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-4">
+                <h3 className="text-xl font-semibold text-[#000080] mb-4">
                   {guarantee.title}
                 </h3>
                 
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-[#1f1f1f] leading-relaxed">
                   {guarantee.description}
                 </p>
               </div>

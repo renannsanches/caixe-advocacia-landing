@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const CoverageSection = () => {
   return (
-    <section className="py-20 bg-light-graphite/50">
+    <section className="py-20 bg-light-graphite/10">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Map/Visual */}
@@ -30,7 +30,7 @@ const CoverageSection = () => {
           {/* Content */}
           <div>
             <ScrollReveal delay={200}>
-              <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+              <span className="text-color:#1f1f1f font-semibold text-sm tracking-wider uppercase mb-4 block">
                 Área de Atuação
               </span>
               <h2 className="heading-secondary">
@@ -39,7 +39,7 @@ const CoverageSection = () => {
             </ScrollReveal>
             
             <ScrollReveal delay={400}>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-color:#1f1f1f mb-8 leading-relaxed">
                 Oferecemos consultoria jurídica especializada para Ribeirão Preto e toda a região, 
                 combinando a agilidade do atendimento remoto com a discrição necessária para 
                 casos criminais.
@@ -49,36 +49,36 @@ const CoverageSection = () => {
             <div className="space-y-6">
               <ScrollReveal delay={600}>
                 <div className="flex items-start">
-                  <div className="bg-gold/10 rounded-lg p-3 mr-4">
-                    <MapPin className="w-6 h-6 text-gold" />
+                  <div className="bg-bluecustom/10 rounded-lg p-3 mr-4">
+                    <MapPin className="w-6 h-6 text-[#000080]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Cobertura Regional</h4>
-                    <p className="text-gray-300">Atendimento presencial em Ribeirão Preto e região, além de consultoria remota via videoconferência.</p>
+                    <h4 className="font-semibold text-[#000080] mb-2">Cobertura Regional</h4>
+                    <p className="text-color:#1f1f1f">Atendimento presencial em Ribeirão Preto e região, além de consultoria remota via videoconferência.</p>
                   </div>
                 </div>
               </ScrollReveal>
               
               <ScrollReveal delay={800}>
                 <div className="flex items-start">
-                  <div className="bg-gold/10 rounded-lg p-3 mr-4">
-                    <Clock className="w-6 h-6 text-gold" />
+                  <div className="bg-bluecustom/10 rounded-lg p-3 mr-4">
+                    <Clock className="w-6 h-6 text-[#000080]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Agilidade Garantida</h4>
-                    <p className="text-gray-300">Resposta rápida e eficiente, adaptada à urgência de cada situação jurídica.</p>
+                    <h4 className="font-semibold text-[#000080] mb-2">Agilidade Garantida</h4>
+                    <p className="text-color:#1f1f1f">Resposta rápida e eficiente, adaptada à urgência de cada situação jurídica.</p>
                   </div>
                 </div>
               </ScrollReveal>
               
               <ScrollReveal delay={1000}>
                 <div className="flex items-start">
-                  <div className="bg-gold/10 rounded-lg p-3 mr-4">
-                    <Shield className="w-6 h-6 text-gold" />
+                  <div className="bg-bluecustom/10 rounded-lg p-3 mr-4">
+                    <Shield className="w-6 h-6 text-[#000080]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-2">Discrição Total</h4>
-                    <p className="text-gray-300">Sigilo absoluto em todas as comunicações e procedimentos legais.</p>
+                    <h4 className="font-semibold text-[#000080] mb-2">Discrição Total</h4>
+                    <p className="text-color:#1f1f1f">Sigilo absoluto em todas as comunicações e procedimentos legais.</p>
                   </div>
                 </div>
               </ScrollReveal>

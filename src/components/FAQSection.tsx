@@ -42,9 +42,9 @@ const FAQSection = () => {
       <div className="section-container">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
-              Perguntas Frequentes
-            </span>
+            <span className="text-blue-900 font-semibold text-sm tracking-wider uppercase mb-4 block">
+  Perguntas Frequentes
+</span>
             <h2 className="heading-secondary">
               Esclarecemos Suas Dúvidas
             </h2>

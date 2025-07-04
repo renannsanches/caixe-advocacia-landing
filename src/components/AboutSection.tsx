@@ -1,27 +1,17 @@
-
 import { Award, Users, Clock, CheckCircle } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import AnimatedCounter from "./AnimatedCounter";
 
 const AboutSection = () => {
-  const achievements = [
-    { icon: Award, label: "Anos de Experiência", value: 15, suffix: "+" },
-    { icon: Users, label: "Casos Defendidos", value: 500, suffix: "+" },
-    { icon: Clock, label: "Atendimento", value: 24, suffix: "h" },
-    { icon: CheckCircle, label: "Taxa de Sucesso", value: 92, suffix: "%" }
-  ];
-
   return (
     <section
-  className="py-20 relative bg-cover bg-center"
-style={{
-  backgroundImage: "url('/images/jbg.webp')",
-  backgroundSize: "auto",         // cobre toda a seção
-  backgroundPosition: "center",    // centraliza a imagem
-  backgroundRepeat: "no-repeat",   // evita repetição
-}}
->
-      
+      className="py-20 relative bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/jbg.webp')",
+        backgroundSize: "auto",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Photo */}
@@ -45,7 +35,7 @@ style={{
           <div>
             <ScrollReveal delay={200}>
               <div className="mb-8">
-                <span className="text-gold font-semibold text-sm tracking-wider uppercase mb-4 block">
+                <span className="text-[#1f1f1f] font-semibold text-sm tracking-wider uppercase mb-4 block">
                   Sobre o Advogado
                 </span>
                 <h2 className="heading-secondary">
@@ -56,51 +46,29 @@ style={{
             
             <div className="space-y-6 text-elegant">
               <ScrollReveal delay={400}>
-                <p className="text-lg">
-                  Dr. Vanderley Caixe Filho é especialista em Direito Criminal com mais de 15 anos de experiência 
-                  na defesa de casos complexos. Formado pela Universidade de São Paulo (USP) e pós-graduado em 
-                  Ciências Criminais, atua com foco em resultados e atendimento humanizado.
-                </p>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={600}>
-                <p>
-                  Sua prática profissional é pautada pela ética, sigilo absoluto e defesa combativa dos direitos 
-                  de seus clientes. Com atuação tanto presencial quanto remota, oferece consultoria especializada 
-                  para familiares de réus em todo território nacional.
+                <p className="text-[#1f1f1f]">
+                  Vanderley Caixe Filho é Formado pela Pontifícia Universidade Católica de São Paulo (PUC-SP).
+                  Especialista em Direitos Humanos pela Universidade Federal de Goiás (UFG). Presidente da Comissão de Direitos Humanos da OAB- RP por duas vezes.
+                  Membro da Comissão de Direitos Humanos da OAB – SP por 2 (dois) anos. Advogado da Pastoral Carcerária de Ribeirão Preto por 10 (dez) anos.
                 </p>
               </ScrollReveal>
               
               <ScrollReveal delay={800}>
                 <div className="bg-light-graphite border-l-4 border-gold p-6 rounded-r-lg">
-                  <p className="text-gold font-medium italic">
-                    "Meu compromisso é transformar conhecimento jurídico em liberdade e justiça para quem precisa. 
-                    Cada caso é único e merece uma estratégia personalizada."
+                  <p className="text-white font-medium italic">
+                    "O direito penal não é para qualquer um. Advogado criminal não pode ser qualquer um. Pois, hoje, nessa estrutura, o Advogado criminal é o defensor do um contra todos.
+                    Quando há a notícia de um crime na sociedade, contra essa pessoa, existe toda uma estrutura policial. Há uma estrutura que necessita buscar culpados. 
+                    Contra esse cara se tem toda a estrutura do Ministério Público; toda estrutura do Poder Judiciário, porque a maioria dos juízes se considera parte integrante do aparato de segurança do estado. Não são garantidores do direito.
+                    Contra esse cara eu tenho toda a mídia. 
+                    Contra esse cara há toda a sociedade. Para defender eu tenho um. Só um, o Advogado. Sofrendo preconceito porque ousa defender o um contra todos. E, mais terrível ainda, começa sofrer preconceito entre os próprios advogados. Ou seja, não é para qualquer um. 
+                    A grande maioria de nós não suportaria essa carga da advocacia criminal."<br />
+                    <strong>Amilton Bueno de Carvalho</strong>
                   </p>
                 </div>
               </ScrollReveal>
             </div>
-            
-            {/* Achievements Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-              {achievements.map((item, index) => (
-                <ScrollReveal key={index} delay={1000 + index * 100}>
-                  <div className="text-center">
-                    <div className="bg-light-graphite rounded-lg p-4 mb-3 mx-auto w-fit border border-gold/20">
-                      <item.icon className="w-6 h-6 text-gold mx-auto" />
-                    </div>
-                    <div className="text-2xl font-bold text-gold">
-                      <AnimatedCounter 
-                        end={item.value} 
-                        suffix={item.suffix} 
-                        duration={2000}
-                      />
-                    </div>
-                    <div className="text-sm text-gray-400">{item.label}</div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+
+            {/* Achievements Grid foi removido completamente */}
           </div>
         </div>
       </div>

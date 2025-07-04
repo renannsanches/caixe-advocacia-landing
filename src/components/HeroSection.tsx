@@ -13,9 +13,9 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/29964942-9f9c-4094-8efc-a79c1da7652a.png"
+          src="/lovable-uploads/bg-hero.webp"
           alt="Dr. Vanderley Caixe Filho - Background"
-          className="w-full h-full object-cover object-center"
+          className="w-auto h-auto object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
@@ -27,8 +27,8 @@ const HeroSection = () => {
           <div className="text-left">
             <ScrollReveal delay={200}>
               <div className="flex items-center mb-6">
-                <Scale className="w-8 h-8 text-gold mr-3" />
-                <span className="text-gold font-semibold text-sm tracking-wider uppercase">
+                <Scale className="w-8 h-8 text-[#004080] mr-3" />
+                <span className="text-[#004080] font-semibold text-sm tracking-wider uppercase">
                   Advocacia Criminal Especializada
                 </span>
               </div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
             
             <ScrollReveal delay={400}>
               <h1 className="heading-primary mb-6">
-                <span className="text-gold">Vanderley Caixe Filho</span>
+                <span className="text-[#004080]">Vanderley Caixe Filho</span>
                 <br />
                 Advogado Criminalista<br />
                 ao Lado de Quem Precisa<br /> de Justiça
@@ -47,7 +47,7 @@ const HeroSection = () => {
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Atuação estratégica, sigilosa e combativa para garantir sua liberdade.
                 <br />
-                <span className="text-gold font-medium">Presencial e Remota em todo o Brasil</span>
+                <span className="text-[#004080] font-medium">Presencial e Remota em todo o Brasil</span>
               </p>
             </ScrollReveal>
             
@@ -69,17 +69,17 @@ const HeroSection = () => {
             </ScrollReveal>
             
             <ScrollReveal delay={1000}>
-              <div className="mt-8 flex items-center space-x-8 text-sm text-gray-400">
+              <div className="mt-8 flex items-center space-x-8 text-sm text-[#1f1f1f]">
                 <div className="flex items-center">
-                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  <div className="w-2 h-2 bg-[#56be5e] rounded-full mr-2"></div>
                   Atendimento 24h
                 </div>
                 <div className="flex items-center">
-                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  <div className="w-2 h-2 bg-[#56be5e] rounded-full mr-2"></div>
                   Sigilo Absoluto
                 </div>
                 <div className="flex items-center">
-                  <div className="w-2 h-2 bg-gold rounded-full mr-2"></div>
+                  <div className="w-2 h-2 bg-[#56be5e] rounded-full mr-2"></div>
                   Defesa Combativa
                 </div>
               </div>
