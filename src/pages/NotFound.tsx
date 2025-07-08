@@ -1,27 +1,31 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Home, ArrowLeft } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+        <h1 className="text-6xl font-bold text-slate-800 mb-4">404</h1>
+        <h2 className="text-2xl font-semibold text-slate-600 mb-4">Página não encontrada</h2>
+        <p className="text-slate-500 mb-8">A página que você está procurando não existe.</p>
+        <div className="flex gap-4 justify-center">
+          <Button asChild>
+            <Link to="/">
+              <Home className="w-4 h-4 mr-2" />
+              Voltar ao Início
+            </Link>
+          </Button>
+          <Button variant="outline" onClick={() => window.history.back()}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Voltar
+          </Button>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

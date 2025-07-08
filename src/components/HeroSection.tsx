@@ -5,7 +5,7 @@ import ScrollReveal from "./ScrollReveal";
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá, Dr. Vanderley. Preciso de orientação jurídica urgente. Pode me ajudar?");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5516996481094?text=${message}`, '_blank');
   };
 
   return (
@@ -15,7 +15,7 @@ const HeroSection = () => {
         <img 
           src="/lovable-uploads/bg-hero.webp"
           alt="Dr. Vanderley Caixe Filho - Background"
-          className="w-auto h-auto object-cover object-center"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>

@@ -1,13 +1,12 @@
-
-import HeroSection from "@/components/HeroSection";
-import MissionSection from "@/components/MissionSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import GuaranteesSection from "@/components/GuaranteesSection";
-import ProcessSection from "@/components/ProcessSection";
-import CoverageSection from "@/components/CoverageSection";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection"
+import MissionSection from "@/components/MissionSection"
+import AboutSection from "@/components/AboutSection"
+import ServicesSection from "@/components/ServicesSection"
+import GuaranteesSection from "@/components/GuaranteesSection"
+import ProcessSection from "@/components/ProcessSection"
+import CoverageSection from "@/components/CoverageSection"
+import FAQSection from "@/components/FAQSection"
+import Footer from "@/components/Footer"
 
 const Index = () => {
   return (
@@ -22,7 +21,7 @@ const Index = () => {
       <FAQSection />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
