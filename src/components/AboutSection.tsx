@@ -25,7 +25,7 @@ const AboutSection = () => {
                   className="w-full h-96 object-cover rounded-2xl shadow-gold"
                 />
                 <div className="absolute top-6 left-6 bg-gold text-black px-4 py-2 rounded-lg font-semibold text-sm">
-                  OAB/SP 123.456
+                  OAB/SP 230.888
                 </div>
               </div>
             </div>

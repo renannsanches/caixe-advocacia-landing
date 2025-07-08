@@ -1,10 +1,12 @@
 
 import { MessageCircle, Instagram, Mail, MapPin, Phone, Scale } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá, Dr. Vanderley. Preciso de orientação jurídica urgente. Pode me ajudar?");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5516996481094?text=${message}`, '_blank');
   };
 
   return (
@@ -17,7 +19,7 @@ const Footer = () => {
               <Scale className="w-8 h-8 text-gold mr-3" />
               <div>
                 <h3 className="text-xl font-bold text-white">Dr. Vanderley Caixe Filho</h3>
-                <p className="text-gold text-sm">OAB/SP 123.456</p>
+                <p className="text-gold text-sm">OAB/SP 230.888</p>
               </div>
             </div>
             
@@ -29,15 +31,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-gold mr-3" />
-                <span className="text-gray-300">(11) 99999-9999</span>
+                <span className="text-gray-300">(16) 99648-1094</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-gold mr-3" />
-                <span className="text-gray-300">contato@vanderleycaixe.adv.br</span>
+                <span className="text-gray-300">contato@vanderleycaixefilho.adv.br</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-gold mr-3" />
-                <span className="text-gray-300">São Paulo, SP - Atendimento Nacional</span>
+                <span className="text-gray-300">Ribeirão Preto, SP</span>
               </div>
             </div>
           </div>
@@ -64,13 +66,15 @@ const Footer = () => {
                 onClick={handleWhatsAppClick}
                 className="w-full whatsapp-button text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Direto
+<FaWhatsapp className="w-5 h-5 mr-2" />
+WhatsApp Direto
+
+
               </button>
               
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/vanderleycaixe" 
+                  href="https://www.instagram.com/vanderley_caixe_filho/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-lg hover:opacity-80 transition-opacity"
@@ -79,7 +83,7 @@ const Footer = () => {
                 </a>
                 
                 <a 
-                  href="mailto:contato@vanderleycaixe.adv.br"
+                  href="mailto:contato@vanderleycaixefilho.adv.br"
                   className="bg-gold text-black p-3 rounded-lg hover:bg-gold/90 transition-colors"
                 >
                   <Mail className="w-6 h-6" />
@@ -100,7 +104,7 @@ const Footer = () => {
         <div className="border-t border-gold/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Dr. Vanderley Caixe Filho. Todos os direitos reservados.
+              © 2025 Dr. Vanderley Caixe Filho. Todos os direitos reservados.
             </p>
             
             <div className="text-xs text-gray-500 max-w-md text-center md:text-right">

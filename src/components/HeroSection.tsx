@@ -1,6 +1,8 @@
 
 import { MessageCircle, Shield, Scale } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -44,7 +46,7 @@ const HeroSection = () => {
             </ScrollReveal>
             
             <ScrollReveal delay={600}>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-black-300 mb-8 leading-relaxed">
                 Atuação estratégica, sigilosa e combativa para garantir sua liberdade.
                 <br />
                 <span className="text-[#004080] font-medium">Presencial e Remota em todo o Brasil</span>
@@ -56,15 +58,11 @@ const HeroSection = () => {
                 <button 
                   onClick={handleWhatsAppClick}
                   className="whatsapp-button text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center group"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                ><FaWhatsapp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Consultoria Emergencial
                 </button>
                 
-                <button className="btn-primary flex items-center justify-center">
-                  <Shield className="w-5 h-5 mr-2" />
-                  Saiba Mais
-                </button>
+                
               </div>
             </ScrollReveal>
             

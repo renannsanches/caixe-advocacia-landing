@@ -24,72 +24,6 @@ const MusicPlayer = () => {
     }
   }, [])
 
-  // Tenta autoplay imediatamente quando carrega
-  useEffect(() => {
-    const tryAutoplay = async () => {
-      const audio = audioRef.current
-      if (!audio) return
-
-      try {
-        // Tenta tocar imediatamente
-        await audio.play()
-        setIsPlaying(true)
-        setUserInteracted(true)
-        setShowActivateButton(false)
-        console.log("Autoplay funcionou!")
-      } catch (error) {
-        console.log("Autoplay bloqueado, aguardando interação:", error)
-        // Se falhar, mantém o sistema de interação
-      }
-    }
-
-    // Tenta autoplay quando o áudio carrega
-    const audio = audioRef.current
-    if (audio) {
-      if (audio.readyState >= 2) {
-        tryAutoplay()
-      } else {
-        audio.addEventListener("canplay", tryAutoplay, { once: true })
-      }
-    }
-  }, [])
-
-  // Listener global para primeira interação - MELHORADO
-  useEffect(() => {
-    const handleFirstInteraction = (e) => {
-      if (!userInteracted) {
-        console.log("Primeira interação detectada:", e.type)
-        activateMusic()
-      }
-    }
-
-    // Mais eventos para capturar interação mais rapidamente
-    const events = ["click", "touchstart", "keydown", "scroll", "mousemove", "touchmove", "mousedown", "pointerdown"]
-
-    events.forEach((event) => {
-      document.addEventListener(event, handleFirstInteraction, {
-        once: true,
-        passive: true,
-        capture: true,
-      })
-    })
-
-    // Também tenta ativar após um pequeno delay se o usuário estiver na página
-    const fallbackTimer = setTimeout(() => {
-      if (!userInteracted && document.hasFocus()) {
-        console.log("Ativação por fallback timer")
-        activateMusic()
-      }
-    }, 1000) // 1 segundo
-
-    return () => {
-      events.forEach((event) => {
-        document.removeEventListener(event, handleFirstInteraction, { capture: true })
-      })
-      clearTimeout(fallbackTimer)
-    }
-  }, [userInteracted])
-
   // Função para ativar música na primeira interação
   const activateMusic = async () => {
     const audio = audioRef.current
@@ -105,6 +39,33 @@ const MusicPlayer = () => {
       console.log("Erro ao ativar música:", error)
     }
   }
+
+  // Listener global para primeira interação - APENAS INTERAÇÕES FORTES
+  useEffect(() => {
+    const handleFirstInteraction = (e) => {
+      if (!userInteracted) {
+        console.log("Primeira interação FORTE detectada:", e.type)
+        activateMusic()
+      }
+    }
+
+    // APENAS eventos de interação que navegadores respeitam para autoplay
+    const events = ["click", "touchstart", "keydown", "pointerdown"]
+
+    events.forEach((event) => {
+      document.addEventListener(event, handleFirstInteraction, {
+        once: true,
+        passive: true,
+        capture: true,
+      })
+    })
+
+    return () => {
+      events.forEach((event) => {
+        document.removeEventListener(event, handleFirstInteraction, { capture: true })
+      })
+    }
+  }, [userInteracted])
 
   // Função para alternar play/pause
   const togglePlay = async () => {
@@ -136,13 +97,13 @@ const MusicPlayer = () => {
 
       {/* 
         🎨 BOTÃO DE ATIVAÇÃO INICIAL 
-        Só aparece se autoplay falhar
+        Aparece até o usuário fazer uma interação forte (click, touch, key)
       */}
       {showActivateButton && !userInteracted && (
         <div className="fixed top-20 right-4 z-[10000] bg-green-500 text-white p-3 rounded-lg shadow-lg animate-bounce">
           <div className="flex items-center gap-2 text-sm">
             <Music className="h-4 w-4" />
-            <span>Clique para ativar música de fundo</span>
+            <span>Clique em qualquer lugar para ativar música</span>
             <Button onClick={activateMusic} size="sm" variant="secondary" className="h-6 px-2 text-xs">
               ▶ Ativar
             </Button>
@@ -163,46 +124,20 @@ const MusicPlayer = () => {
         */}
         {isPlaying && (
           <div className="flex items-end gap-1 h-12">
-            {/* Barra 1 */}
-            <div
-              className="w-1 bg-green-500 rounded-full animate-pulse"
-              style={{
-                height: "20px",
-                animation: "bounce1 0.8s ease-in-out infinite alternate",
-              }}
-            ></div>
-            {/* Barra 2 */}
-            <div
-              className="w-1 bg-green-400 rounded-full"
-              style={{
-                height: "30px",
-                animation: "bounce2 0.6s ease-in-out infinite alternate",
-              }}
-            ></div>
-            {/* Barra 3 */}
-            <div
-              className="w-1 bg-green-500 rounded-full"
-              style={{
-                height: "25px",
-                animation: "bounce3 0.7s ease-in-out infinite alternate",
-              }}
-            ></div>
-            {/* Barra 4 */}
-            <div
-              className="w-1 bg-green-300 rounded-full"
-              style={{
-                height: "35px",
-                animation: "bounce4 0.5s ease-in-out infinite alternate",
-              }}
-            ></div>
-            {/* Barra 5 */}
-            <div
-              className="w-1 bg-green-500 rounded-full"
-              style={{
-                height: "15px",
-                animation: "bounce5 0.9s ease-in-out infinite alternate",
-              }}
-            ></div>
+            {/* Barra 1 - Animação lenta */}
+            <div className="w-1 bg-green-500 rounded-full animate-pulse h-5"></div>
+
+            {/* Barra 2 - Animação média */}
+            <div className="w-1 bg-green-400 rounded-full animate-bounce h-7"></div>
+
+            {/* Barra 3 - Animação rápida */}
+            <div className="w-1 bg-green-500 rounded-full animate-pulse h-6" style={{ animationDelay: "0.2s" }}></div>
+
+            {/* Barra 4 - Animação média */}
+            <div className="w-1 bg-green-300 rounded-full animate-bounce h-8" style={{ animationDelay: "0.1s" }}></div>
+
+            {/* Barra 5 - Animação lenta */}
+            <div className="w-1 bg-green-500 rounded-full animate-pulse h-4" style={{ animationDelay: "0.3s" }}></div>
           </div>
         )}
 
@@ -216,7 +151,7 @@ const MusicPlayer = () => {
           onClick={togglePlay}
           size="icon"
           title="Hino de Duran - Chico Buarque"
-          className="h-12 w-12 rounded-full bg-black/70 hover:bg-black/80 text-white shadow-lg transition-all duration-200 hover:scale-105 relative"
+          className="h-12 w-12 rounded-full bg-black/80 hover:bg-black/90 text-white shadow-lg transition-all duration-200 hover:scale-105 relative"
         >
           {/* 
             ▶️ ÍCONES PLAY/PAUSE 
@@ -231,33 +166,6 @@ const MusicPlayer = () => {
           )}
         </Button>
       </div>
-
-      {/* 
-        🎨 CSS ANIMATIONS PARA AS BARRAS DE VOLUME
-        Cada barra tem uma animação diferente para criar efeito de equalizer
-      */}
-      <style jsx>{`
-        @keyframes bounce1 {
-          0% { height: 15px; }
-          100% { height: 25px; }
-        }
-        @keyframes bounce2 {
-          0% { height: 20px; }
-          100% { height: 35px; }
-        }
-        @keyframes bounce3 {
-          0% { height: 18px; }
-          100% { height: 30px; }
-        }
-        @keyframes bounce4 {
-          0% { height: 25px; }
-          100% { height: 40px; }
-        }
-        @keyframes bounce5 {
-          0% { height: 10px; }
-          100% { height: 20px; }
-        }
-      `}</style>
     </>
   )
 }

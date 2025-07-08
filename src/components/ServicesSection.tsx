@@ -74,12 +74,17 @@ const ServicesSection = () => {
           ))}
         </div>
         
-        <ScrollReveal delay={800}>
-          <div className="text-center mt-12">
-            <button className="btn-primary">
-              Consulte Seu Caso
-            </button>
-          </div>
+      <ScrollReveal delay={800}>
+  <div className="text-center mt-12">
+    <a
+      href="https://wa.me/5516996481094?text=Olá,%20gostaria%20de%20consultar%20meu%20caso."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-primary inline-block"
+    >
+      Consulte Seu Caso
+    </a>
+  </div>
         </ScrollReveal>
       </div>
     </section>

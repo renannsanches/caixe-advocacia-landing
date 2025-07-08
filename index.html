@@ -27,7 +27,43 @@
   </head>
 
   <body>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+<link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+
+<style>
+  /* Fundo da tooltip menos transparente e texto branco */
+  .rwb-tooltip {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: #fff !important;
+  }
+
+  /* Efeito pulsante no ícone */
+  #robbu-whatsapp-button img {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+</style>
+
+<a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=16996481094&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site,%20pode%20me%20ajudar?">
+  <div class="rwb-tooltip">Fale no WhatsApp agora!</div>
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+</a>
+
   </body>
 </html>
