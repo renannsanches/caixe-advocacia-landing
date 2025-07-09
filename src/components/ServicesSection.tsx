@@ -6,7 +6,7 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Shield,
-      title: "Defesa em Crimes Patrimoniais",
+      title: "Defesas Criminais",
       description: "Estratégia especializada para furto, roubo, estelionato e crimes contra o patrimônio.",
     },
     {
