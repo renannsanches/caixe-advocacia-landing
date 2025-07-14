@@ -46,7 +46,7 @@ const AboutSection = () => {
             
             <div className="space-y-6 text-elegant">
               <ScrollReveal delay={400}>
-                <p className="text-[#1f1f1f]">
+                <p className="text-[13px] sm:text-[14px] font-medium text-[#1f1f1f]">
                   Vanderley Caixe Filho é Formado pela Pontifícia Universidade Católica de São Paulo (PUC-SP).
                   Especialista em Direitos Humanos pela Universidade Federal de Goiás (UFG). Presidente da Comissão de Direitos Humanos da OAB- RP por duas vezes.
                   Membro da Comissão de Direitos Humanos da OAB – SP por 2 (dois) anos. Advogado da Pastoral Carcerária de Ribeirão Preto por 10 (dez) anos.
@@ -55,13 +55,13 @@ const AboutSection = () => {
               
               <ScrollReveal delay={800}>
                 <div className="bg-light-graphite border-l-4 border-gold p-6 rounded-r-lg">
-                  <p className="text-white font-medium italic">
+                  <p className="text-white text-[13px] sm:text-[14px] italic">
                     "O direito penal não é para qualquer um. Advogado criminal não pode ser qualquer um. Pois, hoje, nessa estrutura, o Advogado criminal é o defensor do um contra todos.
                     Quando há a notícia de um crime na sociedade, contra essa pessoa, existe toda uma estrutura policial. Há uma estrutura que necessita buscar culpados. 
                     Contra esse cara se tem toda a estrutura do Ministério Público; toda estrutura do Poder Judiciário, porque a maioria dos juízes se considera parte integrante do aparato de segurança do estado. Não são garantidores do direito.
                     Contra esse cara eu tenho toda a mídia. 
                     Contra esse cara há toda a sociedade. Para defender eu tenho um. Só um, o Advogado. Sofrendo preconceito porque ousa defender o um contra todos. E, mais terrível ainda, começa sofrer preconceito entre os próprios advogados. Ou seja, não é para qualquer um. 
-                    A grande maioria de nós não suportaria essa carga da advocacia criminal."<br />
+                    A grande maioria de nós não suportaria essa carga da advocacia criminal."<br /><br />
                     <strong>Amilton Bueno de Carvalho</strong>
                   </p>
                 </div>

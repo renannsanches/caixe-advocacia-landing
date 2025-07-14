@@ -13,7 +13,7 @@ const MissionSection = () => {
       author: "Juarez Cirino dos Santos"
     },
     {
-      text: "As drogas que hoje são arbitrariamente consideradas substâncias proibidas ganharam esse status paulatinamente… ‘Trata‑se de constatar que não há bem jurídico a ser protegido. Há efetivamente uma ordem estatal política criminal de drogas.’",
+      text: "As drogas que hoje são arbitrariamente consideradas substâncias proibidas ganharam esse status paulatinamente… 'Trata‑se de constatar que não há bem jurídico a ser protegido. Há efetivamente uma ordem estatal política criminal de drogas.'",
       author: "Luis Carlos Valois - O Direito Penal da Guerra às Drogas"
     },
     {
@@ -82,10 +82,17 @@ const MissionSection = () => {
         <div className="relative">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            {/* Desktop Background */}
             <img
               src="/justice.webp"
               alt="Justiça e Liberdade"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hidden sm:block"
+            />
+            {/* Mobile Background */}
+            <img
+              src="/justice-mobile.webp"
+              alt="Justiça e Liberdade"
+              className="w-full h-full object-cover block sm:hidden"
             />
             <div className="absolute inset-0 bg-black/70"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-gold/20 to-transparent"></div>
@@ -96,13 +103,13 @@ const MissionSection = () => {
             <div className="max-w-3xl">
               <ScrollReveal delay={200}>
                 <div className="flex items-center mb-8">
-                  <Scale className="w-12 h-12 text-gold mr-4" />
-                  <Shield className="w-12 h-12 text-gold" />
+                  <Scale className="w-8 h-8 text-gold mr-4" />
+                  <Shield className="w-8 h-8 text-gold" />
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={400}>
-                <h2 className="font-playfair text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                <h2 className="font-playfair font-bold text-white mb-8 leading-tight" style={{ fontSize: '2.5rem' }}>
                   Justiça & <span className="text-gold">Liberdade</span>
                 </h2>
               </ScrollReveal>
@@ -119,7 +126,7 @@ const MissionSection = () => {
                     min-h-[12rem]
                   `}
                 >
-                  <p className="text-2xl text-gray-200 leading-relaxed font-light mb-4">
+                  <p className="text-gray-200 leading-relaxed font-light mb-4" style={{ fontSize: '1.2rem' }}>
                     "{currentQuote.text}"
                   </p>
                   <div className="mt-4 flex items-center text-gold font-semibold">
